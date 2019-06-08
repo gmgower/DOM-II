@@ -1,5 +1,4 @@
 // Your code goes here
-
 // mouse click events
 const buttons = document.querySelectorAll('.btn');
 buttons[0].addEventListener('click', function (event) {
@@ -36,4 +35,16 @@ body.addEventListener('copy', e => {
 
 body.addEventListener('dblclick', e => e.target.style.fontSize = '2rem')
 
+//mouseenter mouseout
+const destImg = document.querySelector('.content-destination img');
 
+destImg.addEventListener('mouseenter', e => {
+  e.target.style.width = '75%'
+  e.target.style.marginLeft = '25%'
+})
+
+destImg.addEventListener('mouseout', e => {
+  e.target.style.width = '100%'
+  e.target.style.marginLeft = '0%'
+  e.preventDefault()
+})
