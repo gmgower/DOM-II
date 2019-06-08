@@ -66,3 +66,12 @@ window.addEventListener('scroll', function (e) {
   e.preventDefault()
 })
 
+let lastClick = document.querySelector('.content-destination');
+lastClick.addEventListener('click', function () {
+  console.log('No logged')
+})
+
+allImgs[3].addEventListener('click', function (e) {
+  console.log('logged');
+  e.stopPropagation();
+})
