@@ -1,11 +1,16 @@
 // Your code goes here
 
 // mouse click events
-const funInTheSunBtn =  document.querySelector('.btn');
-funInTheSunBtn.addEventListener('click', function (event) {
-  event.target.style.color = "red"
-  console.log(`funInTheSunBtn clicked: ${event}`)
+const buttons = document.querySelectorAll('.btn');
+buttons[0].addEventListener('click', function (event) {
+  event.target.style.color = `red`
+  console.log(`buttons clicked: ${event}`)
 })
+buttons[1].addEventListener('click', function (event) {
+    event.target.style.fontSize = `3rem`
+  console.log(`buttons clicked: ${event}`)
+    
+  })
 
 // mouseover  & mouseout
 const introImg = document.querySelectorAll('.intro img');
@@ -22,16 +27,13 @@ introImg.forEach(function (element) {
 // wheel, copy, dblclick
 const body = document.querySelector('body')
 
-body.addEventListener('wheel', function (e) {
-  e.target.style.backgroundColor = 'red';
-})
+body.addEventListener('wheel', e => e.target.style.backgroundColor = 'lightgray')
 
-body.addEventListener('copy', function (e) {
+body.addEventListener('copy', e => {
   e.target.style.visibility = 'hidden';
   e.preventDefault();
 })
 
-body.addEventListener('dblclick', function (e) {
-  e.target.style.fontSize = '2rem'
-})
+body.addEventListener('dblclick', e => e.target.style.fontSize = '2rem')
+
 
