@@ -56,3 +56,13 @@ const allImgs = document.querySelectorAll('img')
 allImgs[2].addEventListener('drag', function (e) {
   e.target.style.padding = '30%';
 })
+
+//scroll
+const selectP = document.querySelectorAll('p');
+
+window.addEventListener('scroll', function (e) {
+  selectP[1].style.border = '1px dashed blue';
+  selectP[2].style.border = '2px solid green';
+  e.preventDefault()
+})
+
