@@ -1,4 +1,5 @@
 // Your code goes here
+
 // mouse click events
 const buttons = document.querySelectorAll('.btn');
 buttons[0].addEventListener('click', function (event) {
@@ -47,4 +48,11 @@ destImg.addEventListener('mouseout', e => {
   e.target.style.width = '100%'
   e.target.style.marginLeft = '0%'
   e.preventDefault()
+})
+
+// drag
+const allImgs = document.querySelectorAll('img')
+
+allImgs[2].addEventListener('drag', function (e) {
+  e.target.style.padding = '30%';
 })
